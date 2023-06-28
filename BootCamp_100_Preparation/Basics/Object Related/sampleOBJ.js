@@ -9,30 +9,24 @@ function simpleFlatObject (obj) {
         let currval = obj[currkey];
 
         if(typeof currval ==='object'){
-
             if(Array.isArray(currval)){
                 let arr = [];
                 for(let j = 0; j<currval.length; j++){
                     arr.push(currval[j]);
                 }
-                result[currkey] = arr.join(" ");
-            
+                result[currkey] = arr.join(" ");            
             }else{
-
                 result[currkey] = [];
                 var insideObj = currval;
                 for(let keys in insideObj){
                   result[currkey].push(`${keys}-${insideObj[keys]}`);
                 }       
             }
-
         }else{
-
             result[currkey] = [];
             result[currkey].push(currval);
         }
     }
-
     return result
 }
 

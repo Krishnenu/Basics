@@ -423,3 +423,14 @@ function star_22(n){
 }
 
 console.log(star_22(3));
+
+
+
+let user1 = { 
+    name : 'Jacob',
+    age : 28
+  };
+  
+let user2 = user1;
+  
+console.log(user1 === user2);
